@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
       - run: npm run build-storybook
       - name: Deploy Storybook
       - run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
